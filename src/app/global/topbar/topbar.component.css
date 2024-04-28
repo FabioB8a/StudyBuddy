@@ -1,9 +1,48 @@
-.content {
-    background-color: #5e5e5e;
-    color: white;
+.layout {
+    display: flex;
 }
 
-.blue-square {
-    width: 100%;
-    height: 15vh;
+.col-2 {
+    flex: 1; /* Toma todo el espacio restante */
 }
+
+.content {
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.underline-mark {
+    border-bottom: #D0C3F2 1px solid;
+}
+
+.title {
+    color: #9C82DE;
+    font-family: 'bricolage grotesque', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.subtitle-no-bold {
+    color: #5E41A7;
+    font-family: 'bricolage grotesque', sans-serif;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+.espacioTitulo {
+    margin-right: 3%;
+    align-items: center;
+}
+
+.espacioSearchBarAndPic {
+    flex-grow: 1;
+}
+
+.espacioSearchBarAndPic .input-group {
+    width: 100%;
+}
+
+
+
