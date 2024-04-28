@@ -1,33 +1,32 @@
 .layout {
     display: flex;
-  }
-  
-  .content {
+}
+
+.col-2 {
+    flex: 1; /* Toma todo el espacio restante */
+}
+
+.content {
     display: flex;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 2%;
-  }
-  .underline-mark{
+}
+
+.underline-mark {
     border-bottom: #D0C3F2 1px solid;
-  }
-  .title{
+}
+
+.title {
     color: #9C82DE;
     font-family: 'bricolage grotesque', sans-serif;
     font-weight: bold;
     font-size: 2.5em;
-  }
-  .subtitle-no-bold{
+}
+
+.subtitle-no-bold {
     color: #5E41A7;
     font-family: 'bricolage grotesque', sans-serif;
     font-weight: 100;
     font-size: 1.5em;
-  }
-  
-
-  .blue-square {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
-    background-color: blue; /* Color azul */
-  }
-  
+}
