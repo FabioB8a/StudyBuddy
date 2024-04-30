@@ -1,30 +1,61 @@
-<div class="layout">
-  
-  <!-- Sidebar -->
-  <div class="col-1">
-  <app-sidebar></app-sidebar>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library of Learning Resources</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2e2e2e;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    .library-header {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .resource-card {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    .resource-title {
+      font-size: 18px;
+      color: #4a86e8;
+    }
+    .resource-description {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 5px;
+    }
+    .resource-date {
+      font-size: 12px;
+      text-align: right;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
 
-  <div class="content col 5">
-    <div class="container col-8">
-      <div class="row underline-mark">
-        <div class="col-md-2">
-          <img ngSrc="assets/images/DuckTransparent%201.png" height="100" width="100" alt="">
-        </div>
-        <div class="col-md-10">
-          <h1 class="row-1 title">Goodmorning buddy</h1>
-          <h3 class="row-1 subtitle-no-bold">Let's discover the magic of studying harder</h3>
-        </div>
-      </div>
-      <div>
-        <h2>library of learning resources</h2>
-        <button><img src="assets/images/Add.png"></button>
-      </div>
+<div class="library-header">Library of Learning Resources</div>
 
-    </div>
-    <div class="container col-2">
-      <h1>jdnksd</h1>
-    </div>
-
-  </div>
+<div class="resource-card">
+  <div class="resource-title">Physics I - Example book</div>
+  <div class="resource-description">The volume blends everyday realism with scientific magic, taking you on a captivating journey through cosmic mysteries.</div>
+  <div class="resource-date">Added today</div>
 </div>
+
+<div class="resource-card">
+  <div class="resource-title">History I - Example document</div>
+  <div class="resource-description">The volume blends everyday realism with scientific magic, taking you on a captivating journey through ancient mysteries.</div>
+  <div class="resource-date">Added today</div>
+</div>
+
+<!-- More resource cards as needed -->
+
+</body>
+</html>
