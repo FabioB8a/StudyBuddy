@@ -28,7 +28,7 @@
         <div class="flashcardsDiv">
 
             <!-- Flashcard 3 (40% smaller) -->
-            <div class="flip-card center smaller2">
+            <div *ngFor="let flashcard of flashcards; let i = index" class="flip-card center smaller2">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="title">Cara delantera 3</p>

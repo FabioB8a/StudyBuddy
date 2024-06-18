@@ -10,7 +10,8 @@ import { TopbarComponent } from '../../global/topbar/topbar.component';
   imports: [
     SidebarComponent,
     TopbarComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CommonModule
   ],
   templateUrl: './flashcards-page.component.html',
   styleUrl: './flashcards-page.component.css'
