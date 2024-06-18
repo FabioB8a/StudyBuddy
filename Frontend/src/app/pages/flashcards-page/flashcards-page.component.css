@@ -7,6 +7,9 @@
     /* Toma todo el espacio restante */
 }
 
+
+/* Contenidos en texto */
+
 .content {
     display: flex;
     margin-left: 2%;
@@ -35,6 +38,7 @@
 
 
 
+/* Flashcards */
 
 
 .flashcardsDiv {
@@ -44,7 +48,6 @@
     justify-content: center;
     align-items: center;
 }
-
 
 .flip-card {
     background-color: transparent;
@@ -112,7 +115,7 @@
 
 
 
-
+/* Barra de progreso */
 
 .progressBarDiv {
     margin-top: 3%;
@@ -124,10 +127,9 @@
 
 .progress-loader {
     width: 110vh;
-    background: white;
+    background: #FFEFB0;
     height: 20px;
     border-radius: 7px;
-    border: 1px solid #b09de0;
 }
 
 .progress {
@@ -136,8 +138,7 @@
     border-radius: 7px;
     background: #9C82DE;
     transition: 0.5s;
-    animation: loading_44 5s cubic-bezier(.4, 1.01, 1, 1) infinite;
-    border: 1px solid #b09de0;
+    animation: loading_44 100s cubic-bezier(.4, 1.01, 1, 1) infinite;
 }
 
 .progressCounter {
@@ -150,8 +151,17 @@
         width: 0%;
     }
 
+    25% {
+        width: 25%;
+    }
+
     50% {
         width: 50%;
+    }
+
+
+    75% {
+        width: 75%;
     }
 
     100% {
