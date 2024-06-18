@@ -16,11 +16,24 @@ import { TopbarComponent } from '../../global/topbar/topbar.component';
 })
 export class FlashcardsPageComponent {
 
+  // Flip de la flashcard
+
   flipped: boolean = false;
 
   toggleFlip() {
     console.log("Card Flipped")
     this.flipped = !this.flipped;
+  }
+
+
+  // Botones clickeados
+
+  btnVolume() {
+    alert("Btn Volumen Clickeado")
+  }
+
+  btnPencil() {
+    alert("Btn Pencil Clickeado")
   }
 
 

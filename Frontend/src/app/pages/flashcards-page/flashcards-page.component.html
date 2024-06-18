@@ -60,12 +60,25 @@
             <div class="flip-card center main" [class.flipped]="flipped">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
+
+                        <!-- Iconos -->
+                        <div class="icons-container">
+                            <button class="icon-button" (click)="btnVolume()">
+                                <i class="bi bi-volume-up-fill"></i>
+                            </button>
+                            <button class="icon-button" (click)="btnPencil()">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                        </div>
+            
                         <p class="title">Cara delantera 1</p>
                         <p>Texto</p>
                         <!-- Botones: Got it, Not Sure -->
                         <div class="button-container">
-                            <button class="card-button">Got it!</button>
-                            <button class="card-button" id="flipButton" (click)="toggleFlip()">Not sure? Flip</button>
+                            <button class="card-button btnOK">Got it!
+                                <i class="bi bi-check-circle"></i>
+                            </button>
+                            <button class="card-button btnWrong" id="flipButton" (click)="toggleFlip()">Not sure? Flip</button>
                         </div>            
                     </div>
                     <div class="flip-card-back">

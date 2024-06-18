@@ -96,9 +96,8 @@
 
 /* Flashcards */
 
-
 .flashcardsDiv {
-    margin-top: 7%;
+    margin-top: 15vh;
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
@@ -178,17 +177,17 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 1px solid #5E41A7;
+    border: 1px solid #D0C3F2;
     border-radius: 1rem;
 }
 
 .flip-card-front {
-    background: linear-gradient(120deg, #D0C3F2 60%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 48%);
+    background: linear-gradient(120deg, #D0C3F2 60%, #b09de0 88%);
     color: white;
 }
 
 .flip-card-back {
-    background: linear-gradient(120deg, #D0C3F2 30%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 78%);
+    background: linear-gradient(120deg, #D0C3F2 30%, #b09de0 88%);
     color: white;
     transform: rotateX(-180deg);
 }
@@ -205,29 +204,76 @@
 
 .button-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
+    justify-content: center;
+    align-items: flex-end; /* Alinea los elementos al final (parte inferior) del contenedor */
+    position: absolute;
+    bottom: 5vh;
+    width: 80%; /* Ancho del contenedor ajustable según tus necesidades */
+    left: 10%; /* Ajusta para centrar horizontalmente */
+    border-radius: 10px;
+    border: 2px solid #5E41A7; /* Borde sólido con grosor de 2px y color */
 }
 
 .card-button {
-    background-color: #5E41A7;
-    color: white;
+    background-color: transparent;
+    color: #4D338E;
     border: none;
+    width: 50%; /* Cada botón ocupa el 50% */
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.card-button:hover {
-    background-color: #4D338E;
+/* Btn Got It */
+.btnOK {
+    border-radius: 8px;
+}
+.btnOK:hover {
+    background-color: #b09de0;
+}
+
+/* Btn Not sure */
+.btnWrong { 
+    background-color: #F25842;
+    border-radius: 8px;
+    color: white;
+}
+.btnWrong:hover {
+    background-color: #ea7866;
 }
 
 .flip-card.flipped .flip-card-inner {
     transform: rotateX(-180deg);
     transition: transform 0.6s ease; /* Asegura que la transición se aplique al hacer clic */
+}
+
+
+/* Iconos de las flashcards */
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 1.5vh; /* Ajusta la posición desde la parte superior */
+    width: 100%; /* Ocupa el ancho completo del contenedor padre */
+    padding: 0 3vh; /* Espaciado horizontal */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #4D338E;
+}
+
+.icon-button i {
+    font-size: 1.5em; /* Ajusta el tamaño de los iconos según sea necesario */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.icon-button:hover i {
+    color: #724ecd; /* Cambia el color del icono al hacer hover */
 }
