@@ -26,6 +26,8 @@
         <!-- Flashcards section -->
         <div class="flashcardsDiv">
 
+
+
             <!-- Flashcard 3 (40% smaller) -->
             <div class="flip-card center smaller2">
                 <div class="flip-card-inner">
@@ -54,12 +56,17 @@
                 </div>
             </div>
 
-            <!-- Flashcard 1 -->
-            <div class="flip-card center main">
+            <!-- Flashcard 1. Se obtiene dinamicamente el estado de "Flipped" para determinar la rotacion de la tarjeta --> 
+            <div class="flip-card center main" [class.flipped]="flipped">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="title">Cara delantera 1</p>
                         <p>Texto</p>
+                        <!-- Botones: Got it, Not Sure -->
+                        <div class="button-container">
+                            <button class="card-button">Got it!</button>
+                            <button class="card-button" id="flipButton" (click)="toggleFlip()">Not sure? Flip</button>
+                        </div>            
                     </div>
                     <div class="flip-card-back">
                         <p class="title">Cara trasera 1</p>
@@ -73,3 +80,6 @@
     </div>
     
 </div>
+
+
+

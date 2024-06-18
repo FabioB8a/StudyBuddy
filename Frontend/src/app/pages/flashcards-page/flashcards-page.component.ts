@@ -16,4 +16,12 @@ import { TopbarComponent } from '../../global/topbar/topbar.component';
 })
 export class FlashcardsPageComponent {
 
+  flipped: boolean = false;
+
+  toggleFlip() {
+    console.log("Card Flipped")
+    this.flipped = !this.flipped;
+  }
+
+
 }
