@@ -18,9 +18,10 @@
 
         <div class="progressBarDiv">
             <div class="progress-loader">
-                <div class="progress"></div>
+                <div class="progress" [style.width.%]="progressPercentage"></div>
             </div>
-            <p class="title progressCounter">50%</p>
+            <p class="title progressCounter">{{ progressPercentage }}%</p>
+            <p class="title progressCounter">{{ viewedFlashcards }}/{{ flashcards.length }}</p>
         </div>
 
         <!-- Flashcards section -->

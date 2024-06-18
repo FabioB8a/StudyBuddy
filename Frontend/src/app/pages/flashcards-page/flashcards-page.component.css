@@ -61,7 +61,7 @@
     border-radius: 5px;
     background: #9C82DE;
     transition: 0.5s;
-    animation: loading_44 20s cubic-bezier(.4, 1.01, 1, 1) infinite;
+    /* animation: loading_44 20s cubic-bezier(.4, 1.01, 1, 1) infinite; */
 }
 
 .progressCounter {
@@ -297,4 +297,3 @@
   .flashcard-enter {
     animation: fadeIn 0.5s ease-out;
   }
-  

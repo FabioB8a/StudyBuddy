@@ -32,34 +32,47 @@ export class FlashcardsPageComponent {
       { title: 'Flashcard 9', frontText: 'Texto de la cara delantera 9', backText: 'Texto de la cara trasera 9', gradientColor1: '#F25842', gradientColor2: '#FFEFB0' },
   ];
 
-  currentCardIndex = 0; // Indice de la flashcard actual
-  flipped: boolean = false; // Status de la tarjeta
+  flipped: boolean = false; // Status de la tarjeta principal
+  progressPercentage: number = 0;
+  viewedFlashcards: number = 0;
 
+
+  // Constructor
+  constructor() {
+    this.calculateProgress();
+  }
+
+
+  // Calculo de porcentaje de progreso de flashcards
+  calculateProgress() {
+    const totalFlashcards = this.flashcards.length;
+    this.progressPercentage = Math.round((this.viewedFlashcards / totalFlashcards) * 100);
+  }
 
   // Flip de la flashcard
-
-
   toggleFlip() {
     console.log("Card Flipped")
     this.flipped = !this.flipped;
   }
 
-
+  // Cambiar de tarjeta
   nextCard() {
-
-    // Se actualiza la flashcard actual
 
     if (this.flashcards.length > 1) {
       // Mover el primer elemento al final del arreglo
-      const firstCard = this.flashcards.shift();
+      const firstCard = this.flashcards.shift(); // Equivalente a Pop
+
       if (firstCard) {
-        this.flashcards.push(firstCard);  
+        this.flashcards.push(firstCard); 
+
+        if (this.viewedFlashcards < this.flashcards.length ) { this.viewedFlashcards++; }
+
+        this.calculateProgress();
       }
     }
 
     this.flipped = false; // Se vuelve al estado inicial de la tarjeta, sin voltear
   }
-
 
   // Botones clickeados
 
