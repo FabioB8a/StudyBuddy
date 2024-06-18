@@ -28,7 +28,7 @@
         <div class="flashcardsDiv">
 
             <!-- Flashcard 3 (40% smaller) -->
-            <div *ngFor="let flashcard of flashcards; let i = index" class="flip-card center smaller2">
+            <div *ngFor="let flashcard of flashcards.slice(2, 3); let i = index" class="flip-card center smaller2" [style.--gradient-color-1]="flashcard.gradientColor1" [style.--gradient-color-2]="flashcard.gradientColor2">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="title">Cara delantera 3</p>
@@ -40,7 +40,7 @@
             </div>
 
             <!-- Flashcard 2 (20% smaller) -->
-            <div class="flip-card center smaller">
+            <div class="flip-card center smaller" [style.--gradient-color-1]="flashcards[1].gradientColor1" [style.--gradient-color-2]="flashcards[1].gradientColor2">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="title">Cara delantera 2</p>
@@ -51,8 +51,9 @@
                 </div>
             </div>
 
-            <!-- Flashcard 1. PRINCIPAL. Se obtiene dinamicamente el estado de "Flipped" para determinar la rotacion de la tarjeta --> 
-            <div *ngFor="let flashcard of flashcards.slice(0, 1); let i = index" class="flip-card center main" [class.flipped]="flipped">
+            <!-- La informacion de la flashcard principal es la única visible --> 
+            <!-- Flashcard 1. PRINCIPAL. Se obtiene dinamicamente el estado de "Flipped" para determinar la rotacion de la tarjeta al igual que los colores para determinar el gradiente --> 
+            <div *ngFor="let flashcard of flashcards.slice(0, 1); let i = index" class="flip-card center main" [class.flipped]="flipped" [style.--gradient-color-1]="flashcard.gradientColor1" [style.--gradient-color-2]="flashcard.gradientColor2">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <!-- Iconos -->
@@ -87,6 +88,9 @@
             </div>        
 
         </div>
+
+
+        
     </div>
     
 </div>
