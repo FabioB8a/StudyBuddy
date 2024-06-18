@@ -12,9 +12,9 @@
 
 .content {
     display: flex;
-    margin-left: 2%;
     margin-right: 2%;
-    margin-top: 2%;
+    margin-left: 1%;
+    margin-top: 1%;
 }
 
 .underline-mark {
@@ -41,7 +41,7 @@
 /* Barra de progreso */
 
 .progressBarDiv {
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
@@ -49,19 +49,19 @@
 }
 
 .progress-loader {
-    width: 110vh;
+    width: 60%;
     background: #FFEFB0;
     height: 20px;
     border-radius: 7px;
 }
 
 .progress {
-    width: 1px;
-    height: 20px;
-    border-radius: 7px;
+    width: 1%;
+    height: 100%;
+    border-radius: 5px;
     background: #9C82DE;
     transition: 0.5s;
-    animation: loading_44 100s cubic-bezier(.4, 1.01, 1, 1) infinite;
+    animation: loading_44 20s cubic-bezier(.4, 1.01, 1, 1) infinite;
 }
 
 .progressCounter {
@@ -82,7 +82,6 @@
         width: 50%;
     }
 
-
     75% {
         width: 75%;
     }
@@ -99,19 +98,27 @@
 
 
 .flashcardsDiv {
-    margin-top: 3%;
+    margin-top: 7%;
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 40vh;
+    height: 40%;
+}
+
+@media (max-width: 1400px) {     /* Media pantalla */
+
+    .flashcardsDiv {
+        margin-top: 15%;
+    }
+
 }
 
 .flip-card {
     background-color: transparent;
-    width: 100vh;
-    height: 50vh;
+    width: 55%;
+    height: 120%;
     perspective: 1000px;
     font-family: sans-serif;
     position: absolute;
@@ -139,20 +146,23 @@
 
 /* Flashcards pequeñas */
 .smaller {
-    width: 95vh;
-    height: 48vh;
-    bottom: 1vh;
+    width: 52.5%;
+    height: 120%;
+    bottom: 0.5vh;
 }
 
 .smaller2 {
-    width: 90vh;
-    height: 46vh;
-    bottom: 6vh;
+    width: 50%;
+    height: 120%;
+    bottom: 4vh;
 }
+
+/* Animaciones */
 
 .smaller .flip-card-inner,
 .smaller2 .flip-card-inner {
-    transform: none !important; /* Deshabilita las transformaciones para las flashcards pequeñas */
+    transform: none !important;
+    /* Deshabilita las transformaciones para las flashcards pequeñas */
 }
 
 .flip-card-front,
