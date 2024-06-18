@@ -38,89 +38,6 @@
 
 
 
-/* Flashcards */
-
-
-.flashcardsDiv {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 70vh; /* Adjust height as needed */
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 100vh;
-    height: 50vh;
-    perspective: 1000px;
-    font-family: sans-serif;
-    position: absolute;
-}
-
-.flip-card:nth-child(2) {
-    width: 80vh;
-    height: 40vh;
-    top: 10vh; /* Adjust top position to control vertical stack spacing */
-}
-
-.flip-card:nth-child(3) {
-    width: 60vh;
-    height: 30vh;
-    top: 20vh; /* Adjust top position to control vertical stack spacing */
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateX(-180deg);
-    transition: transform 0.5s ease;
-}
-
-.flip-card-front,
-.flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 1px solid #5E41A7;
-    border-radius: 1rem;
-}
-
-.flip-card-front {
-    background: linear-gradient(120deg, #D0C3F2 60%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 48%);
-    color: white;
-}
-
-.flip-card-back {
-    background: linear-gradient(120deg, #D0C3F2 30%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 78%);
-    color: white;
-    transform: rotateX(-180deg);
-}
-
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 /* Barra de progreso */
 
 .progressBarDiv {
@@ -173,4 +90,100 @@
     100% {
         width: 100%;
     }
+}
+
+
+
+
+/* Flashcards */
+
+
+.flashcardsDiv {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 40vh;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100vh;
+    height: 50vh;
+    perspective: 1000px;
+    font-family: sans-serif;
+    position: absolute;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+    transition: transform 0.3s ease;
+}
+
+/* Flashcard principal */
+.main {
+    visibility: hidden;
+    visibility: visible;
+}
+
+/* Flashcards pequeñas */
+.smaller {
+    width: 95vh;
+    height: 48vh;
+    bottom: 1vh;
+}
+
+.smaller2 {
+    width: 90vh;
+    height: 46vh;
+    bottom: 6vh;
+}
+
+.smaller .flip-card-inner,
+.smaller2 .flip-card-inner {
+    transform: none !important; /* Deshabilita las transformaciones para las flashcards pequeñas */
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #5E41A7;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #D0C3F2 60%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 48%);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #D0C3F2 30%, #b09de0 88%, #D0C3F2 40%, #D0C3F2 78%);
+    color: white;
+    transform: rotateX(-180deg);
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
