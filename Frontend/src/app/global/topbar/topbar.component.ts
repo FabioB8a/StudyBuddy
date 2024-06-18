@@ -9,4 +9,14 @@ import { Component, Input } from '@angular/core';
 })
 export class TopbarComponent {
   @Input() title: string = '';
+
+
+  onSearchClick() {
+    alert('Botón de búsqueda clickeado');
+  }
+
+  onProfileClick() {
+    alert('Botón de perfil clickeado');
+  }
+
 }
