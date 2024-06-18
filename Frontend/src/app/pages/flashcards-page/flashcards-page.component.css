@@ -213,7 +213,6 @@
     width: 80%; /* Ancho del contenedor ajustable según tus necesidades */
     left: 10%; /* Ajusta para centrar horizontalmente */
     border-radius: 10px;
-    border: 2px solid #5E41A7; /* Borde sólido con grosor de 2px y color */
 }
 
 .card-button {
@@ -228,20 +227,33 @@
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 0 0 0 0;
 }
 
 /* Btn Got It */
 .btnOK {
-    border-radius: 8px;
+    border-radius: 1vh 0vh 0vh 1vh;
+    border: 2px solid #4D338E;
 }
 .btnOK:hover {
     background-color: #b09de0;
 }
 
+/* Btn Continue */
+.btnContinue {
+    border-radius: 1vh 1vh 1vh 1vh;
+    border: 2px solid #4D338E;
+}
+.btnContinue:hover {
+    background-color: #b09de0;
+}
+
 /* Btn Not sure */
 .btnWrong { 
+    border-radius: 0vh 1vh 1vh 0vh;
+    border: 2px solid #F25842;
+
     background-color: #F25842;
-    border-radius: 8px;
     color: white;
 }
 .btnWrong:hover {
