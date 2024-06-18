@@ -181,6 +181,8 @@
     border-radius: 1rem;
 }
 
+
+/* Gradiente proveniente de Typescript */
 .flip-card-front {
     background: linear-gradient(120deg, var(--gradient-color-1) 60%, var(--gradient-color-2) 88%);
     color: white;

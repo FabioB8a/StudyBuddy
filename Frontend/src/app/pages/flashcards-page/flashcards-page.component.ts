@@ -43,9 +43,15 @@ flashcards = [
     this.flipped = !this.flipped;
   }
 
+  currentCardIndex = 0; // Indice de la flashcard actual
+
   nextCard() {
-    // TO-DO
-    console.log("Next card")
+      // Avanzar al siguiente índice de flashcard
+      this.currentCardIndex++;
+      // Si llegamos al final, volver al principio
+      if (this.currentCardIndex >= this.flashcards.length) {
+          this.currentCardIndex = 0;
+      }
   }
 
 
