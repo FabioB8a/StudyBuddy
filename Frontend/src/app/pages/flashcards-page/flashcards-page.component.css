@@ -279,3 +279,22 @@
 .icon-button:hover i {
     color: #724ecd; /* Cambia el color del icono al hacer hover */
 }
+
+
+/* Animación de entrada de flashcard */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .flashcard-enter {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
