@@ -11,7 +11,7 @@ import { TopbarComponent } from '../../global/topbar/topbar.component';
     SidebarComponent,
     TopbarComponent,
     NgOptimizedImage,
-    CommonModule
+    CommonModule // CRUCIAL para *NgFor
   ],
   templateUrl: './flashcards-page.component.html',
   styleUrl: './flashcards-page.component.css'

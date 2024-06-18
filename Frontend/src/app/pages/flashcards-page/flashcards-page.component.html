@@ -51,11 +51,10 @@
                 </div>
             </div>
 
-            <!-- Flashcard 1. Se obtiene dinamicamente el estado de "Flipped" para determinar la rotacion de la tarjeta --> 
-            <div class="flip-card center main" [class.flipped]="flipped">
+            <!-- Flashcard 1. PRINCIPAL. Se obtiene dinamicamente el estado de "Flipped" para determinar la rotacion de la tarjeta --> 
+            <div *ngFor="let flashcard of flashcards.slice(0, 1); let i = index" class="flip-card center main" [class.flipped]="flipped">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-
                         <!-- Iconos -->
                         <div class="icons-container">
                             <button class="icon-button" (click)="btnVolume()">
@@ -65,29 +64,27 @@
                                 <i class="bi bi-pencil-square"></i>
                             </button>
                         </div>
-            
-                        <p class="title">Cara delantera 1</p>
+                        <p class="title">{{ flashcard.frontText }}</p>
                         <!-- Botones: Got it, Not Sure -->
                         <div class="button-container">
                             <button class="card-button btnOK">Got it!
                                 <i class="bi bi-check-circle"></i>
                             </button>
                             <button class="card-button btnWrong" id="flipButton" (click)="toggleFlip()">Not sure? Flip</button>
-                        </div>            
+                        </div>
                     </div>
                     <div class="flip-card-back">
-                        <p class="title">Cara trasera 1</p>
+                        <p class="title">{{ flashcard.backText }}</p>
                         <p>Texto</p>
-
                         <!-- Botón para continuar a la siguiente flashcard -->
                         <div class="button-container">
                             <button class="card-button btnOK" style="width: 100%;">Continue
                                 <i class="bi bi-arrow-right"></i>
                             </button>
-                        </div>   
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>        
 
         </div>
     </div>
